@@ -8,7 +8,8 @@ def media():
     primeiraNota = request.args.get('nota1')
     segundaNota = request.args.get('nota2')
 
-    media = (float(primeiraNota) + float(segundaNota))/2
+    media = (float(primeiraNota) + float(
+        segundaNota))/2
 
     if media < 4:
         resultado = 'Reprovado'
@@ -16,7 +17,7 @@ def media():
         resultado = 'Recuperação'
     else:
         resultado = 'Aprovado'
-    return render_template('notas.html')
+    return render_template('media.html')
 
 
 if __name__ == '__main__':
